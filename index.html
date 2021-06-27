@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="navbarContainer">
+        <div id="navbar">
+            <div id="bubbleWrapper">
+                <div id="bubble1" class="bubble">
+                    <span class="icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </div>
+                <div id="bubble2" class="bubble">
+                    <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                    </span>
+                </div>
+                <div id="bubble3" class="bubble">
+                    <span class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </span>
+                </div>
+                <div id="bubble4" class="bubble">
+                    <span class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </span>
+                </div>
+            </div>
+            <div id="menuWrapper">
+                <div id="menu1" class="menuElement" onclick="move('1', '50px', '#6441A4')"><i class="fas fa-user"></i>
+                </div>
+                <div id="menu2" class="menuElement" onclick="move('2', '150px', '#1DA1F2')"><i
+                        class="fab fa-twitter"></i></div>
+                <div id="menu3" class="menuElement" onclick="move('3', '250px', '#1877F2')"><i
+                        class="fab fa-facebook"></i></div>
+                <div id="menu4" class="menuElement" onclick="move('4', '350px', '#E4405F')"><i
+                        class="fab fa-instagram"></i></div>
+            </div>
+        </div>
+        <div id="bgWrapper">
+            <div id="bg"></div>
+            <div id="bgBubble"></div>
+        </div>
+    </div>
+
+    <svg width="0" height="0">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" id="blurFilter" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+
+</body>
+
+</html>
